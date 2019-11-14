@@ -2,7 +2,7 @@
 
 git clone git@github.com:52ing/Puppteer.git
 
-cd P
+cd Puppeteer
 
 npm install
 
