@@ -54,7 +54,12 @@ function log(text) {
   });
   log('1 \ 로그인 화면')
   await delay(1000)
-
+  var checkResult = await page.evaluate( () => {
+    return true;
+});
+log(checkResult) // evaluate 처리에 대한 로그 출력
+  rows.push(['1','로그인', checkResult])
+  await delay(1000)
 
   await page.click("#account > a");	// 클릭이벤트를 실행
   log('2. 로그인버튼선택!!')
