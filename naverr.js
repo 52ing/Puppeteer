@@ -60,6 +60,7 @@ function log(text) {
 log(checkResult) // evaluate 처리에 대한 로그 출력
   rows.push(['1','로그인', checkResult])
   await delay(1000)
+  
 
   await page.click("#account > a");	// 클릭이벤트를 실행
   log('2. 로그인버튼선택!!')
@@ -76,6 +77,12 @@ log(checkResult) // evaluate 처리에 대한 로그 출력
 
   await page.$eval('#id', el => el.value = 'id_tmp');
   log('3. id 입력!')
+  await delay(1000)
+  var checkResult = await page.evaluate( () => {
+    return true;
+});
+log(checkResult) // evaluate 처리에 대한 로그 출력
+  rows.push(['3','입력확인', checkResult])
   await delay(1000)
 
   await page.$eval('#pw', el => el.value = 'pw_tmp');
