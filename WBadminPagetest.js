@@ -48,7 +48,7 @@ function log(text) {
   });
 
   page = await browser.newPage();
-  await page.goto('https://uat-admin.wirebarley.com/login');
+  await page.goto('url');
   await page.screenshot({path: '1.jpg'});
 
   page.on('dialog', async d => {
@@ -543,46 +543,3 @@ rows.push(['5','로그인', res ])
 })()
 
 
-
-
-// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// // page.on('dialog', async d => {
-// //   dialog = d;
-// //   await delay(1000);
-// //   await dialog.dismiss()
-// // });
-// // 크롬에서 제공하는 Popup창 무조건 닫기.
-
-// // console.log(dialog.message());
-// // Popup 창에 대한 메세지 내용.
-
-// // await page.goto('http://192.168.10.161:10277/renobit/manager.do#/');
-// // await delay(1000)
-// // 기존 page 가 아닌 다른 page 로 이동.
-
-// // var rows = [];
-
-// // var checkResult = await page.evaluate('');
-// // log(checkResult)
-// // rows.push(['45','Fire 123 포커싱 (이전 포커싱 해제후 이동)', checkResult])
-
-// // const workbook = new excel.Workbook();
-// // const sheet = workbook.addWorksheet('테스트 결과');
-// // sheet.addTable({
-// //   name: '테스트 결과',
-// //   ref: 'A1',
-// //   columns: [{name: 'Number'},{name: 'Case'}, {name: 'Result'}],
-// //   rows: rows
-// // });
-
-// // await workbook.xlsx.writeFile('시나리오테스트.xlsx');
-// //excel 로 내보내기.
-
-// await browser.close();
-// 브라우저 닫기.
-
-// var check = false;
-// if (checkResult == 'true'){
-// check = true;
-// }
-//   true일때
