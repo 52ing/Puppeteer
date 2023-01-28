@@ -45,7 +45,7 @@ function log(text) {
   });
 
   page = await browser.newPage();
-  await page.goto('http://192.168.10.161:10277/renobit/login.do');
+  await page.goto('url');
   await page.screenshot({path: '1.jpg'});
 
   page.on('dialog', async d => {
